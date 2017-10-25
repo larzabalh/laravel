@@ -11,6 +11,13 @@
 |
 */
 
+Route::get('/peliculas/prueba', 'PeliculasController@prueba');
+
+Route::get('/peliculas/prueba/{id}', 'PeliculasController@buscarPeliculas');
+
+Route::get('/peliculas/buscar/{nombre}', 'PeliculasController@buscarPeliculasXnombre');
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -67,3 +74,9 @@ Route::get('/potencia/{numero}/{numero2?}', function ($numero,$numero2=null) {
           };
     return $resultado;
 });
+
+Route::get('/hernan', function () {
+    return view('hernan');
+});
+
+Route::get('/hernan2', 'PeliculasController@hernan2');
