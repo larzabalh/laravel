@@ -11,6 +11,8 @@
 |
 */
 
+Route::get('/peliculas/actores', 'ActorController@Directory');
+
 Route::get('/peliculas/prueba', 'PeliculasController@prueba');
 
 Route::get('/peliculas/prueba/{id}', 'PeliculasController@buscarPeliculas');
