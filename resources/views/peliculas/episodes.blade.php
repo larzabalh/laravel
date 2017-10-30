@@ -10,13 +10,9 @@
 
 <h3>Lista</h3>
 
-@foreach ($actores as $key => $value)
-  <li>{{ $value->first_name }}</li>
+@foreach ($episodes as $key => $value)
+  <li>{{ $value->title }}</li>
 @endforeach
-
-<pre>
-  {!!var_dump($request)!!}
-</pre>
 
 
   </body>

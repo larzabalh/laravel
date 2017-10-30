@@ -11,6 +11,13 @@
 |
 */
 
+
+Route::post('/peliculas/formulario', 'EpisodeController@crear');
+
+Route::get('/peliculas/formulario', 'EpisodeController@formulario');
+
+Route::get('/peliculas/episodes', 'EpisodeController@Directory');
+
 Route::get('/peliculas/actores', 'ActorController@Directory');
 
 Route::get('/peliculas/prueba', 'PeliculasController@prueba');
