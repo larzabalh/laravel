@@ -10,16 +10,16 @@
         <form id="agregarPelicula" name="agregarPelicula" method="POST">
           {{ csrf_field() }}
             <div>
-                <label for="titulo">Titulo</label>
-                <input type="text" name="titulo" id="titulo"/>
+                <label for="title">Titulo</label>
+                <input type="text" name="title" id="titulo"/>
             </div>
             <div>
                 <label for="rating">Rating</label>
                 <input type="text" name="rating" id="rating"/>
             </div>
             <div>
-                <label for="premios">Premios</label>
-                <input type="text" name="premios" id="premios"/>
+                <label for="awards">Premios</label>
+                <input type="text" name="awards" id="premios"/>
             </div>
             <div>
                 <label for="duracion">Duracion</label>

@@ -11,10 +11,14 @@
 |
 */
 
+Route::get('/peliculas', 'MovieController@Directory');
+Route::get('/peliculas/formulario/editar/{id}', 'MovieController@editarformulario')->name('editmovie');
+Route::put('/peliculas/{id}', 'MovieController@editar');
 
-Route::post('/peliculas/formulario', 'EpisodeController@crear');
+Route::get('/peliculas/formulario', 'MovieController@formulario');
+Route::post('/peliculas/formulario', 'MovieController@crear');
 
-Route::get('/peliculas/formulario', 'EpisodeController@formulario');
+// Route::get('/peliculas/formulario', 'EpisodeController@formulario');
 
 Route::get('/peliculas/episodes', 'EpisodeController@Directory');
 

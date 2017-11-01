@@ -14,9 +14,6 @@
   <li>{{ $value->first_name }}</li>
 @endforeach
 
-<pre>
-  {!!var_dump($request)!!}
-</pre>
 
 
   </body>

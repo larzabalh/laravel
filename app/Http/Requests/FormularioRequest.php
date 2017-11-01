@@ -24,7 +24,7 @@ class FormularioRequest extends FormRequest
     public function rules()
     {
         return [
-          'titulo' => 'required|max:255'
+          'title' => 'required|max:255'
 
         ];
     }
@@ -32,7 +32,7 @@ class FormularioRequest extends FormRequest
     public function messages()
     {
         return [
-          'titulo.required' => 'Las Pelis van con Titulo'
+          'title.required' => 'Las Pelis van con Titulo'
 
         ];
     }
