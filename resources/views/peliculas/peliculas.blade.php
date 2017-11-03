@@ -10,11 +10,13 @@
 
 <h3>Lista</h3>
 
-@foreach ($peliculas as $key => $value)
-  <li>{{ $value->title }} <a href="{{ route('editmovie', $key)}}">Editar</a> <a href="">Eliminar</a> </li>
+@foreach ($peliculas as $value)
+  <li>{{ $value->title }} <a href="{{ route('editmovie', $value->id)}}">Editar</a> <a href="{{ route('confirmo', $value->id)}}">Eliminar</a> </li>
 
 
 @endforeach
+
+{{ $peliculas->links()}}
 
 
 <a href="peliculas/formulario">NUEVA PELICULA</a>

@@ -1,8 +1,9 @@
 <pre>
-@php
-  var_dump ($errors);
-  var_dump($pelicula);
-@endphp
+  <?php
+  // var_dump ($errors);
+  // var_dump($pelicula);
+  // die;
+?>
 </pre>
 $peliculas['']
 $peliculas->fasf
@@ -12,7 +13,9 @@ $peliculas->fasf
         <title>Agregar Pelicula</title>
     </head>
     <body>
-        <form id="agregarPelicula" name="agregarPelicula" method="POST">
+        <form id="agregarPelicula" name="agregarPelicula" method="post" action="{{ route('updatemovie',$pelicula->id)}}">
+           <input type="hidden" name="_method" value="put" />
+          {{ csrf_field() }}
             <div>
                 <label for="title">Titulo</label>
                 <input type="text" name="title" id="titulo" value="{{$pelicula->title}}"/>

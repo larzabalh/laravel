@@ -13,16 +13,23 @@
 
 Route::get('/peliculas', 'MovieController@Directory');
 Route::get('/peliculas/formulario/editar/{id}', 'MovieController@editarformulario')->name('editmovie');
-Route::put('/peliculas/{id}', 'MovieController@editar');
+// Route::put('/peliculas/{id}', 'MovieController@editar');
 
 Route::get('/peliculas/formulario', 'MovieController@formulario');
 Route::post('/peliculas/formulario', 'MovieController@crear');
+Route::put('/peliculas/formulario/{id}', 'MovieController@update')->name('updatemovie');
+Route::get('/peliculas/formulario/borrar/{id}', 'MovieController@paginaborrar')->name('confirmo');
+Route::delete('/peliculas/formulario/borrar/{id}', 'MovieController@delete')->name('deletemovie');
 
 // Route::get('/peliculas/formulario', 'EpisodeController@formulario');
 
+Route::get('/peliculas/actores/ver{id}', 'ActorController@ver');
+
+
+
 Route::get('/peliculas/episodes', 'EpisodeController@Directory');
 
-Route::get('/peliculas/actores', 'ActorController@Directory');
+
 
 Route::get('/peliculas/prueba', 'PeliculasController@prueba');
 

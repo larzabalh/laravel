@@ -14,4 +14,12 @@ class ActorController extends Controller
     $actores = Actor::all();
       return view('peliculas.actores', ['actores' => $actores,'request' =>$request]);
     }
+
+    public function ver($id){
+
+
+        return view('peliculas.actores.ver', ['actores' => $actores,'request' =>$request]);
+      }
+
+
 }
