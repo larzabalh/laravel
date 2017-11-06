@@ -7,6 +7,7 @@
   </head>
   <body>
 
+{{ $user->name}}
 
 <h3>Lista</h3>
 

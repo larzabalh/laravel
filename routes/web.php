@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('login/google', 'Auth\LoginController@redirectToProvider');
+Route::get('oauth2callback', 'Auth\LoginController@handleProviderCallback');
+
+
 
 Route::get('/peliculas', 'MovieController@Directory');
 Route::get('/peliculas/formulario/editar/{id}', 'MovieController@editarformulario')->name('editmovie');
@@ -100,3 +104,7 @@ Route::get('/hernan', function () {
 });
 
 Route::get('/hernan2', 'PeliculasController@hernan2');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

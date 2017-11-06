@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Movie;
 use App\Http\Requests\FormularioRequest;
+use Illuminate\Support\Facades\Auth;
 
 class MovieController extends Controller
 {
   public function Directory(){
 
     $peliculas = Movie::paginate(5);
-      return view('peliculas.peliculas', ['peliculas' => $peliculas]);
+      return view('peliculas.peliculas', ['peliculas' => $peliculas, 'user'=>Auth::user()]);
     }
 
   public function formulario(){
